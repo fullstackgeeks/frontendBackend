@@ -60,6 +60,8 @@ const app = express()
 //without it, the data will be undefined
 app.use(express.json())
 
+app.use(express.static('dist'))
+
 const morgan = require('morgan')
 
 // let notes = [
@@ -389,7 +391,7 @@ app.use(unknownEndpoint)
 
 
 const PORT = process.env.PORT || 3001
-app.listen(PORT, ()=> {console.log(`Server running on port', ${PORT}`)})
+app.listen(PORT, ()=> {console.log(`Server running on port', ${RT}`)})
 
 
 
