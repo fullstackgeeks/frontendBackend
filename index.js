@@ -143,6 +143,10 @@ app.get('/', (request, response) => {
 })
 
 
+app.get('/notes', (req, res) => {
+    res.send("<h1>Note route is requested by the frontend application </h1>")
+})
+
 const now = new Date()
 
 //using morgan for logging of just a particular route
